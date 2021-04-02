@@ -22,6 +22,7 @@
 		4988DD932616EBA800A0A969 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4988DD922616EBA800A0A969 /* Extensions.swift */; };
 		4988DD9C2616F0F100A0A969 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4988DD9B2616F0F100A0A969 /* LoginController.swift */; };
 		4988DDA12616F16700A0A969 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4988DDA02616F16700A0A969 /* RegistrationController.swift */; };
+		4988DDA62616F78C00A0A969 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4988DDA52616F78C00A0A969 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		4988DD922616EBA800A0A969 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4988DD9B2616F0F100A0A969 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		4988DDA02616F16700A0A969 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		4988DDA52616F78C00A0A969 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				4988DD922616EBA800A0A969 /* Extensions.swift */,
+				4988DDA52616F78C00A0A969 /* Utilities.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			files = (
 				4988DD832616E42E00A0A969 /* NotificationsController.swift in Sources */,
 				4988DD8B2616E44500A0A969 /* ConversationsController.swift in Sources */,
+				4988DDA62616F78C00A0A969 /* Utilities.swift in Sources */,
 				4988DD342616E1EA00A0A969 /* AppDelegate.swift in Sources */,
 				4988DD932616EBA800A0A969 /* Extensions.swift in Sources */,
 				4988DD9C2616F0F100A0A969 /* LoginController.swift in Sources */,
