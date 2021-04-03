@@ -63,7 +63,7 @@ class UploadTweetController: UIViewController {
         guard let caption = captionTextView.text else { return }
         TweetService.shared.uploadTweet(caption: caption) { (error, ref) in
             if let error = error {
-                print("DEBUG : Failed to upload tweet with error")
+                print("DEBUG : Failed to upload tweet with error \(error)")
                 return
             }
             
