@@ -136,6 +136,8 @@ class TweetCell: UICollectionViewCell {
     func configure() {
         guard let tweet = tweet else { return }
         
+        profileImageView.sd_setImage(with: tweet.user.profileImageUrl, completed: nil)
         captionLabel.text = tweet.caption
+        infoLabel.text = tweet.user.username
     }
 }
