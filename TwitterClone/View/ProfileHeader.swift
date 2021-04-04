@@ -44,7 +44,7 @@ class ProfileHeader: UICollectionReusableView {
     
     private let profileImage: UIImageView = {
         let iv = UIImageView()
-        iv.contentMode = .scaleAspectFit
+        iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         iv.backgroundColor = .lightGray
         iv.layer.borderColor = UIColor.white.cgColor
