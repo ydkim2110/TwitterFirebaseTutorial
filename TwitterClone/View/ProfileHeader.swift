@@ -66,7 +66,6 @@ class ProfileHeader: UICollectionReusableView {
     private let fullnameLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 20)
-        label.text = "Superman Mr"
         return label
     }()
     
@@ -74,7 +73,6 @@ class ProfileHeader: UICollectionReusableView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = .lightGray
-        label.text = "superman"
         return label
     }()
     
@@ -82,13 +80,11 @@ class ProfileHeader: UICollectionReusableView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16)
         label.numberOfLines = 3
-        label.text = "This is a user bio that will span more than one line for test purposes"
         return label
     }()
     
     private let followingLabel: UILabel = {
         let label = UILabel()
-        label.text = "0 Following"
         let followTap = UITapGestureRecognizer(target: self, action: #selector(handleFollowersTapped))
         label.isUserInteractionEnabled = true
         label.addGestureRecognizer(followTap)
@@ -97,7 +93,6 @@ class ProfileHeader: UICollectionReusableView {
     
     private let followersLabel: UILabel = {
         let label = UILabel()
-        label.text = "2 Followers"
         let followTap = UITapGestureRecognizer(target: self, action: #selector(handleFollowingTapped))
         label.addGestureRecognizer(followTap)
         return label
@@ -190,6 +185,9 @@ class ProfileHeader: UICollectionReusableView {
         
         followingLabel.attributedText = viewModel.followingString
         followersLabel.attributedText = viewModel.followerString
+        
+        fullnameLabel.text = user.fullname
+        usernameLabel.text = viewModel.usernameText
     }
     
 }
