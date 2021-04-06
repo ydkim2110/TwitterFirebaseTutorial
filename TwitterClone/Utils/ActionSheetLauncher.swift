@@ -85,8 +85,6 @@ class ActionSheetLauncher: NSObject {
     }
     
     func show() {
-        print("DEBUG : Show action sheet for user \(user.username)")
-        
         guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else { return }
         self.window = window
         
@@ -126,7 +124,9 @@ extension ActionSheetLauncher: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! ActionSheetCell
+        
         cell.option = viewModel.options[indexPath.row]
+        
         return cell
     }
 }

@@ -26,7 +26,6 @@ class ActionSheetCell: UITableViewCell {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 18)
-        label.text = "Test Option"
         return label
     }()
     

@@ -58,7 +58,7 @@ class TweetController: UICollectionViewController {
     }
     
     fileprivate func showActionSheet(forUser user : User) {
-        actionSheetLauncher = ActionSheetLauncher(user: tweet.user)
+        actionSheetLauncher = ActionSheetLauncher(user: user)
         actionSheetLauncher.delegate = self
         actionSheetLauncher.show()
     }
@@ -112,7 +112,6 @@ extension TweetController: UICollectionViewDelegateFlowLayout {
 
 extension TweetController: TweetHeaderDelegate {
     func showActionSheet() {
-        
         if tweet.user.isCurrentUser {
             showActionSheet(forUser: tweet.user)
         } else {
@@ -127,6 +126,19 @@ extension TweetController: TweetHeaderDelegate {
 
 extension TweetController: ActionSheetLauncherDelegate {
     func didSelect(option: ActionSheetOptions) {
-        print("DEBUG : Option in controller is \(option.description)")
+        switch option {
+        case .follow(let user):
+            UserService.shared.followUser(uid: user.uid) { (error, ref) in
+                print("DEBUG : Follow \(user.username)")
+            }
+        case .unfollow(let user):
+            UserService.shared.unfollowUser(uid: user.uid) { (error, ref) in
+                print("DEBUG : Unfollow \(user.username)")
+            }
+        case .report:
+            print("DEBUG : Report tweet")
+        case .delete:
+            print("DEBUG : Delete tweet")
+        }
     }
 }
