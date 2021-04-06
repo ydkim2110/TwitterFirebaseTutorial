@@ -36,6 +36,7 @@
 		4988DDA12616F16700A0A969 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4988DDA02616F16700A0A969 /* RegistrationController.swift */; };
 		4988DDA62616F78C00A0A969 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4988DDA52616F78C00A0A969 /* Utilities.swift */; };
 		498F8DAF261BE8CA006CBCC1 /* ActionSheetLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498F8DAE261BE8CA006CBCC1 /* ActionSheetLauncher.swift */; };
+		498F8DB4261BEF35006CBCC1 /* ActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498F8DB3261BEF34006CBCC1 /* ActionSheetCell.swift */; };
 		498FBE77261818D30090F3C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 498FBE76261818D30090F3C8 /* GoogleService-Info.plist */; };
 		498FBE7F26181FE60090F3C8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498FBE7E26181FE60090F3C8 /* Constants.swift */; };
 		498FBE8426182B020090F3C8 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498FBE8326182B020090F3C8 /* AuthService.swift */; };
@@ -108,6 +109,7 @@
 		4988DDA02616F16700A0A969 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		4988DDA52616F78C00A0A969 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		498F8DAE261BE8CA006CBCC1 /* ActionSheetLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetLauncher.swift; sourceTree = "<group>"; };
+		498F8DB3261BEF34006CBCC1 /* ActionSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetCell.swift; sourceTree = "<group>"; };
 		498FBE76261818D30090F3C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		498FBE7E26181FE60090F3C8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		498FBE8326182B020090F3C8 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 				49864A952619718D00B35582 /* ProfileFilterCell.swift */,
 				496EAA8826199B3E00372102 /* UserCell.swift */,
 				499AD424261AFF6C00FD7720 /* TweetHeader.swift */,
+				498F8DB3261BEF34006CBCC1 /* ActionSheetCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				4988DD8B2616E44500A0A969 /* ConversationsController.swift in Sources */,
 				496EAA8926199B3E00372102 /* UserCell.swift in Sources */,
 				4988DDA62616F78C00A0A969 /* Utilities.swift in Sources */,
+				498F8DB4261BEF35006CBCC1 /* ActionSheetCell.swift in Sources */,
 				4988DD342616E1EA00A0A969 /* AppDelegate.swift in Sources */,
 				4988DD932616EBA800A0A969 /* Extensions.swift in Sources */,
 				499AD420261AFE0300FD7720 /* TweetController.swift in Sources */,
