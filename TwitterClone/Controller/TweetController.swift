@@ -115,7 +115,7 @@ extension TweetController: TweetHeaderDelegate {
         if tweet.user.isCurrentUser {
             showActionSheet(forUser: tweet.user)
         } else {
-            UserService.shared.checkIfUserIsFollowed(uid: tweet.uid) { isFollowed in
+            UserService.shared.checkIfUserIsFollowed(uid: tweet.user.uid) { isFollowed in
                 var user = self.tweet.user
                 user.isFollowed = isFollowed
                 self.showActionSheet(forUser: user)

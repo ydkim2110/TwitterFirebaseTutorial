@@ -86,8 +86,6 @@ struct TweetService {
     func likeTweet(tweet: Tweet, completion: @escaping DatabaseCompletion) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
-        
-        
         let likes = tweet.didLike ? tweet.likes - 1 : tweet.likes + 1
         
         REF_TWEETS.child(tweet.tweetID).child("likes").setValue(likes)
