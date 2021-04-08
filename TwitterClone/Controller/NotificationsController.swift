@@ -84,7 +84,6 @@ class NotificationsController: UITableViewController {
 // MARK: - UITableViewDataSource
 
 extension NotificationsController {
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return notifications.count
     }
