@@ -36,7 +36,6 @@ class TweetCell: UICollectionViewCell {
         iv.addGestureRecognizer(tap)
         iv.isUserInteractionEnabled = true
         return iv
-        
     }()
     
     private let captionLabel: UILabel = {

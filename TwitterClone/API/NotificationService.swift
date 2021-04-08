@@ -20,12 +20,13 @@ struct NotificationService {
                                       "type": type.rawValue]
         
         if let tweet = tweet {
-            values["tweetId"] = tweet.tweetID
+            values["tweetID"] = tweet.tweetID
             REF_NOTIFICATIONS.child(tweet.user.uid).childByAutoId().updateChildValues(values)
         } else if let user = user {
             REF_NOTIFICATIONS.child(user.uid).childByAutoId().updateChildValues(values)
         }
     }
+    
     
     func fetchNotifications(completion: @escaping ([Notification]) -> Void) {
         var notifications = [Notification]()
