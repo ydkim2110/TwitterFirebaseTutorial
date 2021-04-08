@@ -82,6 +82,13 @@ class TweetCell: UICollectionViewCell {
         return button
     }()
     
+    private let replyLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .lightGray
+        label.font = UIFont.systemFont(ofSize: 12)
+        return label
+    }()
+    
     private let infoLabel = UILabel()
     
     // MARK: - Lifecycle
@@ -91,18 +98,24 @@ class TweetCell: UICollectionViewCell {
         
         backgroundColor = .white
         
-        addSubview(profileImageView)
-        profileImageView.anchor(top: topAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 8)
+        let captioStack = UIStackView(arrangedSubviews: [infoLabel, captionLabel])
+        captioStack.axis = .vertical
+        captioStack.distribution = .fillProportionally
+        captioStack.spacing = 4
         
-        let stack = UIStackView(arrangedSubviews: [infoLabel, captionLabel])
+        let imageCaptionStack = UIStackView(arrangedSubviews: [profileImageView, captioStack])
+        imageCaptionStack.distribution = .fillProportionally
+        imageCaptionStack.spacing = 12
+        imageCaptionStack.alignment = .leading
+        
+        let stack = UIStackView(arrangedSubviews: [replyLabel, imageCaptionStack])
         stack.axis = .vertical
+        stack.spacing = 8
         stack.distribution = .fillProportionally
-        stack.spacing = 4
         
         addSubview(stack)
-        stack.anchor(top: profileImageView.topAnchor, left: profileImageView.rightAnchor, right: rightAnchor, paddingLeft: 12, paddingRight: 12)
+        stack.anchor(top: topAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 8, paddingLeft: 12, paddingRight: 12)
         
-        infoLabel.text = "Superman Mr @super"
         infoLabel.font = UIFont.systemFont(ofSize: 14)
         
         let actionStack = UIStackView(arrangedSubviews: [commentButton, retweetButton, likeButton, shareButton])
@@ -159,5 +172,8 @@ class TweetCell: UICollectionViewCell {
         
         likeButton.tintColor = viewModel.likeButtonTintColor
         likeButton.setImage(viewModel.likeButtonImage, for: .normal)
+        
+        replyLabel.isHidden = viewModel.shouldHideReplyLabel
+        replyLabel.text = viewModel.replyText
     }
 }
