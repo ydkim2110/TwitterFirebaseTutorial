@@ -93,7 +93,6 @@ class ProfileController: UICollectionViewController {
     func fetchUserStats() {
         UserService.shared.fetchUserStats(uid: user.uid) { stats in
             self.user.stats = stats
-            print("DEBUG : followers \(stats.followers)")
             self.collectionView.reloadData()
         }
     }
@@ -176,7 +175,10 @@ extension ProfileController: ProfileHeaderDelegate {
     func handleEditProfileFollow(_ header: ProfileHeader) {
         
         if user.isCurrentUser {
-            print("DEBUG : Show edit profile...")
+            let controller = EditProfileController(user: user)
+            let nav = UINavigationController(rootViewController: controller)
+            nav.modalPresentationStyle = .fullScreen
+            present(nav, animated: true, completion: nil)
             return
         }
         
