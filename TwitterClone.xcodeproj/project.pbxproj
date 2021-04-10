@@ -10,6 +10,8 @@
 		496EAA8926199B3E00372102 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496EAA8826199B3E00372102 /* UserCell.swift */; };
 		497397712621AFB7001DA35B /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497397702621AFB7001DA35B /* EditProfileController.swift */; };
 		497397772621B1F3001DA35B /* EditProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497397762621B1F3001DA35B /* EditProfileHeader.swift */; };
+		4973977C2621B7C2001DA35B /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4973977B2621B7C2001DA35B /* EditProfileViewModel.swift */; };
+		497397812621B821001DA35B /* EditProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497397802621B821001DA35B /* EditProfileCell.swift */; };
 		498607C1261861D1005E16B6 /* UploadTweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498607C0261861D1005E16B6 /* UploadTweetController.swift */; };
 		498607C6261867AF005E16B6 /* CaptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498607C5261867AF005E16B6 /* CaptionTextView.swift */; };
 		498607CB26186B66005E16B6 /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498607CA26186B66005E16B6 /* TweetService.swift */; };
@@ -84,6 +86,8 @@
 		496EAA8826199B3E00372102 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		497397702621AFB7001DA35B /* EditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
 		497397762621B1F3001DA35B /* EditProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileHeader.swift; sourceTree = "<group>"; };
+		4973977B2621B7C2001DA35B /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
+		497397802621B821001DA35B /* EditProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileCell.swift; sourceTree = "<group>"; };
 		498607C0261861D1005E16B6 /* UploadTweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetController.swift; sourceTree = "<group>"; };
 		498607C5261867AF005E16B6 /* CaptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionTextView.swift; sourceTree = "<group>"; };
 		498607CA26186B66005E16B6 /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
@@ -269,6 +273,7 @@
 				499AD424261AFF6C00FD7720 /* TweetHeader.swift */,
 				498F8DB3261BEF34006CBCC1 /* ActionSheetCell.swift */,
 				49935096261E818700C1A366 /* NotificationCell.swift */,
+				497397802621B821001DA35B /* EditProfileCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -298,6 +303,7 @@
 				499AD429261B130000FD7720 /* UploadTweetViewModel.swift */,
 				498F8DB8261BF2B9006CBCC1 /* ActionSheetViewModel.swift */,
 				4993509B261E8ABF00C1A366 /* NotificationViewModel.swift */,
+				4973977B2621B7C2001DA35B /* EditProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -598,6 +604,7 @@
 				49864A87261963FE00B35582 /* ProfileController.swift in Sources */,
 				499AD42A261B130000FD7720 /* UploadTweetViewModel.swift in Sources */,
 				49864A8C2619697400B35582 /* ProfileHeader.swift in Sources */,
+				497397812621B821001DA35B /* EditProfileCell.swift in Sources */,
 				498607D52618728C005E16B6 /* TweetCell.swift in Sources */,
 				4988DD9C2616F0F100A0A969 /* LoginController.swift in Sources */,
 				49892AB0261D3843008BFD17 /* Notification.swift in Sources */,
@@ -614,6 +621,7 @@
 				49864A8226195C6900B35582 /* TweetViewModel.swift in Sources */,
 				498F8DB9261BF2B9006CBCC1 /* ActionSheetViewModel.swift in Sources */,
 				49935097261E818700C1A366 /* NotificationCell.swift in Sources */,
+				4973977C2621B7C2001DA35B /* EditProfileViewModel.swift in Sources */,
 				4988DDA12616F16700A0A969 /* RegistrationController.swift in Sources */,
 				4988DD782616E3E100A0A969 /* FeedController.swift in Sources */,
 				49864A912619705900B35582 /* ProfileFilterView.swift in Sources */,
