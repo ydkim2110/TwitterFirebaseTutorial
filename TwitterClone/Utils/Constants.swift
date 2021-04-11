@@ -18,6 +18,7 @@ let REF_USER_LIKES = DB_REF.child("twitter_user_likes")
 let REF_TWEET_LIKES = DB_REF.child("twitter_tweet_likes")
 let REF_NOTIFICATIONS = DB_REF.child("twitter_notifications")
 let REF_USER_REPLIES = DB_REF.child("twitter_user_replies")
+let REF_USER_USERNAMES = DB_REF.child("twitter_user_usernames")
 
 let STORAGE_REF = Storage.storage().reference()
 let STORAGE_PROFILE_IMAGES = STORAGE_REF.child("twitter_profile_image")
