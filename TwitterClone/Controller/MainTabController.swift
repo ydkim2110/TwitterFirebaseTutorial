@@ -8,9 +8,17 @@
 import UIKit
 import Firebase
 
+enum ActionButtonConfiguration {
+    case tweet
+    case message
+}
+
 class MainTablController: UITabBarController {
     
     // MARK: - Properties
+    
+    private var buttonConfig: ActionButtonConfiguration = .tweet
+    
     var user: User? {
         didSet {
             guard let nav = viewControllers?[0] as? UINavigationController else { return }
@@ -34,7 +42,6 @@ class MainTablController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        logUserOut()
         view.backgroundColor = .twitterBlue
         authenticateUserAndConfigureUI()
     }
@@ -62,18 +69,18 @@ class MainTablController: UITabBarController {
         }
     }
     
-    func logUserOut() {
-        do {
-            try Auth.auth().signOut()
-        } catch let error {
-            print("DEBUG : Failed to sign out with error \(error.localizedDescription)")
-        }
-    }
-    
     // MARK: - Selectors
     @objc func actionButtonTapped() {
-        guard let user = user else { return }
-        let controller = UploadTweetController(user: user, config: .tweet)
+        let controller: UIViewController
+        
+        switch buttonConfig {
+        case .tweet:
+            guard let user = user else { return }
+            controller = UploadTweetController(user: user, config: .tweet)
+        case .message:
+            controller = SearchController(config: .messages)
+        }
+        
         let nav = UINavigationController(rootViewController: controller)
         nav.modalPresentationStyle = .fullScreen
         present(nav, animated: true, completion: nil)
@@ -82,6 +89,7 @@ class MainTablController: UITabBarController {
     // MARK: - Helpers
     
     func configureUI() {
+        self.delegate = self
         view.addSubview(actionButton)
         
         actionButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingBottom: 64, paddingRight: 16, width: 56, height: 56)
@@ -92,7 +100,7 @@ class MainTablController: UITabBarController {
         let feed = FeedController(collectionViewLayout: UICollectionViewFlowLayout())
         let nav1 = templateNavigationController(image: UIImage(named: "home_unselected"), rootViewController: feed)
         
-        let explore = ExploreController()
+        let explore = SearchController(config: .userSearch)
         let nav2 = templateNavigationController(image: UIImage(named: "search_unselected"), rootViewController: explore)
         
         let notifications = NotificationsController()
@@ -109,5 +117,14 @@ class MainTablController: UITabBarController {
         nav.tabBarItem.image = image
         nav.navigationBar.barTintColor = .white
         return nav
+    }
+}
+
+extension MainTablController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        let index = viewControllers?.firstIndex(of: viewController)
+        let image = index == 3 ? #imageLiteral(resourceName: "mail") : #imageLiteral(resourceName: "new_tweet")
+        self.actionButton.setImage(image, for: .normal)
+        buttonConfig = index == 3 ? .message : .tweet
     }
 }
